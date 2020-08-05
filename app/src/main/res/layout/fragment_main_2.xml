@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:circle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/ColorLayoutRipplePressed"-->
+    <!--android:layout_marginBottom="@dimen/height_60dp"-->
+    <!--android:fillViewport="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_48dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="消息中心"
+                android:textColor="#2b2b2b"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_main2_msg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/height_100dp"
+                    android:orientation="horizontal">
+
+                    <com.yxq.myframdome.util.CircleRelativeLayout
+                        android:id="@+id/crlCallMsg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        circle:background_alpha="250"
+                        circle:background_color="@color/bgMain">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCallMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true" />
+                    </com.yxq.myframdome.util.CircleRelativeLayout>
+
+                    <TextView
+                        android:id="@+id/itemNum1"
+                        android:layout_width="31dp"
+                        android:layout_height="27dp"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_toRightOf="@id/crlCallMsg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/bgMain"
+                        android:textSize="@dimen/text_size_16"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/height_100dp"
+                    android:orientation="horizontal">
+
+                    <com.yxq.myframdome.util.CircleRelativeLayout
+                        android:id="@+id/crlWorkMsg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/text_size_8"
+                        circle:background_alpha="250"
+                        circle:background_color="@color/bgMain">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivWorkMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true" />
+                    </com.yxq.myframdome.util.CircleRelativeLayout>
+
+                    <TextView
+                        android:id="@+id/itemNum2"
+                        android:layout_width="31dp"
+                        android:layout_height="27dp"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_toRightOf="@id/crlWorkMsg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/bgMain"
+                        android:textSize="@dimen/text_size_16"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--具体提醒  star-->
+        <LinearLayout
+            android:id="@+id/tvMsgs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgMain"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <include
+                layout="@layout/multiple_smartrefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_8dp" />
+        </LinearLayout>
+        <!--具体提醒  end-->
+    </LinearLayout>
+    <!--</ScrollView>-->
+</FrameLayout>

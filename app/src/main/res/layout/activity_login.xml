@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/width_40dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="@dimen/width_40dp">
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/imvCode"-->
+                <!--                    android:layout_width="50dp"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_alignParentLeft="true"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:background="@drawable/ic_login_logo" />-->
+                <ImageView
+                    android:id="@+id/imvCode"
+                    android:layout_width="164.5dp"
+                    android:layout_height="51.5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/ic_login_gtext_adb" />
+
+                <TextView
+                    android:id="@+id/tv_new_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/new_user_register"
+                    android:textColor="@color/bgMain"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/width_40dp"
+                android:layout_marginTop="@dimen/view_height_60"
+                android:layout_marginRight="@dimen/width_40dp">
+
+                <TextView
+                    android:id="@+id/tvKey1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/welcome_use_security"
+                    android:textColor="@color/bgMain"
+                    android:textSize="@dimen/text_size_26" />
+
+                <TextView
+                    android:id="@+id/tvKeyPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvKey1"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/height_20dp"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/bgMain"
+                    android:textSize="@dimen/text_size_14" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/tvKeyPhone"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:hint="请输入手机号码"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/bgMain"
+                    android:textColorHint="@color/colorAppBackground"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_Key1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_username"
+                    android:layout_marginTop="@dimen/margin_top_5dp"
+                    android:background="@color/colorTextGray" />
+
+                <TextView
+                    android:id="@+id/tvKeyPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_Key1"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/height_10dp"
+                    android:text="@string/password"
+                    android:textColor="@color/bgMain"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/ed_userpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/tvKeyPwd"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/bgMain"
+                    android:textColorHint="@color/colorAppBackground"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_Key2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_userpwd"
+                    android:layout_marginTop="@dimen/margin_top_5dp"
+                    android:background="@color/colorTextGray" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key2"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_btn_login_blue"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="@color/bgMain"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_login"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_top_8dp"
+                    android:text="@string/forget_pwd"
+                    android:textColor="@color/color_title"
+                    android:textSize="@dimen/text_size_16" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

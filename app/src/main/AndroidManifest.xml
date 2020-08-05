@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yxq.myframdome">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- **** 二维码扫描 **** -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 许可振动 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 打开闪光灯 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 许可使用照相机 -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- 许可调用相机硬件 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.yxq.myframdome.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,UnusedAttribute,InnerclassSeparator">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="fe3f6f30eb210f6e73816988d68791bc" />
+
+        <activity
+            android:name="com.yxq.myframdome.module.IndexActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 高德地图定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="com.yxq.myframdome.sample.APIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.user.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.user.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.user.ExamineActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页 star -->
+        <activity
+            android:name="com.yxq.myframdome.module.user.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.user.ChangePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.FileDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yxq.myframdome.module.QRCodeScannerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页 end -->
+
+    </application>
+
+</manifest>

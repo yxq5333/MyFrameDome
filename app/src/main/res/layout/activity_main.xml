@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_main_bottom_white_topline"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_1"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/selector_home_tab_one"
+            android:text="工作" />
+
+        <!--<androidx.appcompat.widget.AppCompatRadioButton-->
+            <!--android:id="@+id/rb_2"-->
+            <!--style="@style/main_tab_bottom"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:drawableTop="@drawable/selector_home_tab_three"-->
+            <!--android:text="报表" />-->
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_2"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/selector_home_tab_two"
+            android:text="消息" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_3"
+            style="@style/main_tab_bottom"
+            android:layout_gravity="center_vertical"
+            android:drawableTop="@drawable/selector_home_tab_four"
+            android:text="我的" />
+
+    </RadioGroup>
+</LinearLayout>

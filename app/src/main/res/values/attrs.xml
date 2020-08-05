@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="searchedit">
+        <attr name="imagewidth" format="dimension" />
+        <attr name="hintTextColor" format="color" />
+        <attr name="textHint" format="string" />
+    </declare-styleable>
+
+    <!-- 自定义星期 View -->
+    <declare-styleable name="WeekView">
+        <attr name="wv_textColor" format="color|reference"/>
+        <attr name="wv_textSize" format="dimension|reference"/>
+    </declare-styleable>
+
+    <!-- 自定义日历 View -->
+    <declare-styleable name="CalendarView">
+        <attr name="cv_textColor" format="color|reference"/>
+        <attr name="cv_selectTextColor" format="color|reference"/>
+        <attr name="cv_textSize" format="dimension|reference"/>
+        <attr name="cv_selectTextSize" format="dimension|reference"/>
+        <attr name="cv_dayBackground" format="reference"/>
+        <attr name="cv_selectDayBackground" format="reference"/>
+        <attr name="cv_dateFormatPattern" format="string|reference"/>
+        <attr name="cv_isChangeDateStatus" format="boolean|reference"/>
+    </declare-styleable>
+
+    <!--<declare-styleable name="CircleImageView">-->
+        <!--<attr name="civ_border_width" format="dimension" />-->
+        <!--<attr name="civ_border_color" format="color" />-->
+        <!--<attr name="civ_border_overlay" format="boolean" />-->
+        <!--<attr name="civ_fill_color" format="color" />-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="RoundCornerImageView">-->
+        <!--<attr name="corner" format="dimension" />-->
+    <!--</declare-styleable>-->
+
+    <!-- 固定比例 -->
+    <declare-styleable name="Ratio">
+        <attr name="width_ratio" format="reference|float" />
+        <attr name="height_ratio" format="reference|float" />
+        <attr name="widthStandard" format="boolean"/>
+    </declare-styleable>
+
+    <!--<declare-styleable name="DotView">-->
+
+        <!--<attr name="bgColor" format="color|reference"/>-->
+
+        <!--<attr name="txt" format="string|reference"/>-->
+
+        <!--<attr name="txtSize" format="dimension|reference"/>-->
+
+        <!--<attr name="txtColor" format="color|reference"/>-->
+
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="CalendarView">-->
+        <!--<attr name="baseTextColor" format="color"/>-->
+        <!--<attr name="baseTextSize" format="dimension"/>-->
+        <!--<attr name="rowHeight" format="dimension"/>-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="menuAttrs">
+
+        <!--文字大小-->
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selectTextSize" format="dimension" />
+
+        <!--文字颜色-->
+        <attr name="normalTextColor" format="color" />
+        <attr name="selectTextColor" format="color" />
+
+        <!--背景颜色-->
+        <attr name="normalBgColor" format="color" />
+        <attr name="selectBgColor" format="color" />
+
+        <!--分割线颜色-->
+        <attr name="separateLineColor" format="color" />
+
+        <!--分割线左侧边距-->
+        <attr name="separateLineMarginLeft" format="dimension" />
+
+        <!--分隔线右侧边距-->
+        <attr name="separateLineMarginRight" format="dimension" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleRelativeLayoutLayout">
+            <attr name="background_color" format="color" />
+            <attr name="background_alpha" format="integer" />
+    </declare-styleable>
+
+
+
+        <declare-styleable name="timeline_style" >
+            <attr name="marker" format="color|reference"/>
+            <attr name="line" format="color|reference"/>
+            <attr name="markerSize" format="dimension"/>
+            <attr name="lineSize" format="dimension"/>
+            <attr name="lineOrientation" format="enum">
+                <enum name="horizontal" value="0"/>
+                <enum name="vertical" value="1"/>
+            </attr>
+            <attr name="linePadding" format="dimension"/>
+            <attr name="markerInCenter" format="boolean"/>
+        </declare-styleable>
+
+</resources>

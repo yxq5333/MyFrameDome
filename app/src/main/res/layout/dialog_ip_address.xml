@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.yxq.myframdome.view.AutoShowDeleteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_protocol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Protocol"
+                android:paddingRight="35dp"
+                android:textSize="14sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="#121212" />
+
+        </com.yxq.myframdome.view.AutoShowDeleteLayout>
+
+        <com.yxq.myframdome.view.AutoShowDeleteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="IP"
+                android:paddingRight="35dp"
+                android:textSize="14sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="#121212" />
+
+        </com.yxq.myframdome.view.AutoShowDeleteLayout>
+
+        <com.yxq.myframdome.view.AutoShowDeleteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Port"
+                android:paddingRight="35dp"
+                android:textSize="14sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="#121212" />
+
+        </com.yxq.myframdome.view.AutoShowDeleteLayout>
+
+        <com.yxq.myframdome.view.AutoShowDeleteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_projectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Project Name"
+                android:paddingRight="35dp"
+                android:textSize="14sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="#121212" />
+
+        </com.yxq.myframdome.view.AutoShowDeleteLayout>
+
+        <com.yxq.myframdome.view.AutoShowDeleteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_realmName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Realm Name"
+                android:paddingRight="35dp"
+                android:textSize="14sp"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="#121212" />
+
+        </com.yxq.myframdome.view.AutoShowDeleteLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_pre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:textColor="#323232"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_ip_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="历史配置"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

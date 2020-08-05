@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:background="@color/ColorLayoutRipplePressed"
+        android:fillViewport="true"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50dp"
+                android:background="@drawable/bg_tv_pictureframe_white_opaque"
+                android:orientation="horizontal">
+                <!--注册类型-->
+                <RadioGroup
+                    android:id="@+id/rgWorkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/confirm10000"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/refuse1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_weight="1"
+                        android:text="机构"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <RadioButton
+                        android:id="@+id/confirm1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="企业"
+                        android:textSize="@dimen/text_size_16" />
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvKeyName"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_left_10dp"
+                    android:paddingRight="@dimen/padding_right_10dp"
+                    android:text="企业名称"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@id/tvKeyName"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入企业名称"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorDividerDark"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_Key0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_name"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvKeyUserName"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key0"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_left_10dp"
+                    android:paddingRight="@dimen/padding_right_10dp"
+                    android:text="手机号码"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/ed_userphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key0"
+                    android:layout_toRightOf="@id/tvKeyUserName"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorDividerDark"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_Key1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_userphone"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvKeyUserPwd"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key1"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="验  证  码"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/ed_userpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key1"
+                    android:layout_marginRight="90dp"
+                    android:layout_toRightOf="@id/tvKeyUserPwd"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入验证码"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorDividerDark"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/tvGetPwd"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_tv_pictureframe_black"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view_Key2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_userpwd"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvKeyLogiPwd"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_left_10dp"
+                    android:paddingRight="@dimen/padding_right_10dp"
+                    android:text="登录密码"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/ed_set_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/view_Key2"
+                    android:layout_toRightOf="@id/tvKeyLogiPwd"
+                    android:background="@drawable/bg_tv_pictureframe_white"
+                    android:drawablePadding="5dp"
+                    android:hint="请设置密码(6-16位字符)"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorDividerDark"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_Key3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1dp"
+                    android:layout_below="@id/ed_set_pwd"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_file_declarations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/tvKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_required"
+                    android:text="我已阅读并接受"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tvPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="《用户协议》"
+                    android:textColor="@color/colorLoginBlue"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="和"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tvCopyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="《版权声明》"
+                    android:textColor="@color/colorLoginBlue"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+            <!--按钮 ‘下一步’-->
+            <TextView
+                android:id="@+id/tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/lightslategray"
+                android:paddingLeft="100dp"
+                android:paddingTop="8dp"
+                android:paddingRight="100dp"
+                android:paddingBottom="8dp"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

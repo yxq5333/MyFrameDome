@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvKeyTwoWeeksAgoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_40dp"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:drawableLeft="@drawable/ic_hometab_two_befor_twoweek"
+            android:drawablePadding="@dimen/margin_5dp"
+            android:text="@string/TwoWeeksAgoInfo"
+            android:visibility="gone"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_size_20" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="3dp"
+            card_view:cardMaxElevation="5dp"
+            card_view:contentPaddingBottom="4dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/margin_5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imgSpot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_spot_blue"
+                    android:visibility="gone"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tvKeyMsgType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:paddingBottom="@dimen/margin_5dp"
+                    android:paddingTop="@dimen/margin_5dp"
+                    android:text="消息类型"
+                    android:layout_toRightOf="@id/imgSpot"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tvValueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/view_margin_60dp"
+                    android:text="星期二"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorGray_"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tvValueType"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tvKeyMsgType"
+                    android:layout_marginRight="@dimen/view_margin_80dp"
+                    android:layout_toRightOf="@id/imgSpot"
+                    android:ellipsize="end"
+                    android:hint="消息描述"
+                    android:gravity="center_vertical"
+                    android:maxEms="23"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <jp.shts.android.library.TriangleLabelView
+                android:id="@+id/tv_zhuangtai"
+                android:layout_width="@dimen/width_40dp"
+                android:layout_height="@dimen/height_40dp"
+                android:layout_gravity="right"
+                app:backgroundColor="@color/gray"
+                app:corner="rightTop"
+                app:labelBottomPadding="5dp"
+                app:labelCenterPadding="5dp"
+                app:labelTopPadding="10dp"
+                app:primaryText="已读"
+                app:primaryTextColor="@android:color/white"
+                app:primaryTextSize="15sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</FrameLayout>

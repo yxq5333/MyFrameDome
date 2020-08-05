@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bgMain" />  //设置该控件的背景颜色
+    //设置边距
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    //控制边界线颜色和笔触大小
+    <stroke
+        android:width="0.5dp"
+        android:color="#BEBEBE" />
+    //控制界面颜色渐变
+    <gradient
+        android:startColor="#E9E9E9"
+        android:endColor="#FFFFFF"
+        android:type="linear"
+        android:angle="90"/>
+    //控制倒角大小
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="16dp"
+        android:topRightRadius="16dp"/>
+
+</shape>
